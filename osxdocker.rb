@@ -1,4 +1,4 @@
-class osxdocker < Formula
+class Osxdocker < Formula
   include Language::Python::Virtualenv
 
   desc "A CLI for working with docker on OSX"
@@ -6,9 +6,6 @@ class osxdocker < Formula
   url "https://github.com/ConorSheehan1/osxdocker/archive/v0.1.3.tar.gz"
   sha256 "6b66d04c218e7116e4c3ef2458bdb637b0461a0e9f08d241355da3d1a62db726"
   head "https://github.com/ConorSheehan1/osxdocker"
-
-  # TODO: If you're submitting an existing package, make sure you include your
-  #       bottle block here.
 
   depends_on :python3
 
