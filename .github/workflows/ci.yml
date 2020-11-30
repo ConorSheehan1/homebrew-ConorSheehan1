@@ -29,3 +29,6 @@ jobs:
     - name: Tests
       run: |
         bundle exec rspec
+    - name: Lint
+      run: |
+        bundle exec rubocop

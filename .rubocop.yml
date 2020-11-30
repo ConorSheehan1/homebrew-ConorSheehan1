@@ -46,3 +46,13 @@ Style/CollectionMethods:
     find_all:  select
     # TODO: prefer length / size to count when no args ar present for performance (count O(n), length o(1))
     # https://stackoverflow.com/questions/53480273/are-there-performance-reasons-to-prefer-size-over-length-or-count-in-ruby
+
+
+# deviations from https://gist.github.com/ConorSheehan1/ed75920ca8722a09b527b37f006cf8e3
+# no docs for brew classes
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Exclude: 
+    - "osxdocker.rb"
