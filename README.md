@@ -1,11 +1,14 @@
-A [homebrew](https://docs.brew.sh/) tap for things I've made.
+[![Build Status](https://github.com/ConorSheehan1/homebrew-ConorSheehan1/workflows/ci/badge.svg)](https://github.com/ConorSheehan1/homebrew-ConorSheehan1/actions/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A [homebrew](https://docs.brew.sh/) [tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap) for things I've made.
 
 # Example
 ```bash
 brew install conorsheehan1/conorsheehan1/osxdocker
 ```
 
-# dev
+# Dev
 ### python
 Formula scaffold using [poet](https://github.com/tdsmith/homebrew-pypi-poet)
 ```bash
@@ -14,6 +17,7 @@ poetry run poet -f osxdocker
 ```
 
 ### ruby
+Tests and linting
 ```bash
 bundle install
 bundle exec rubocop # --safe-auto-correct
