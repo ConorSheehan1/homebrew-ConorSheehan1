@@ -7,6 +7,8 @@ class Osxdocker < Formula
   sha256 "22494190cb8053c806ae19b02c6ec998a59b2a959076f4bd84bc7d0b2fad81c3"
 
   depends_on "python3"
+  depends_on "docker" => :recommended
+  depends_on "screen" => :recommended
 
   resource "fire" do
     url "https://files.pythonhosted.org/packages/34/a7/0e22e70778aca01a52b9c899d9c145c6396d7b613719cd63db97ffa13f2f/fire-0.3.1.tar.gz"
