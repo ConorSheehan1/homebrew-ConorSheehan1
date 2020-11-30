@@ -7,4 +7,7 @@ brew install ConorSheehan1/ConorSheehan1/osxdocker
 
 # dev
 ### python
-Formula scaffold using [pybrew](https://github.com/thanethomson/python-brewer)
+Formula scaffold using [poet](https://github.com/tdsmith/homebrew-pypi-poet)
+```bash
+poetry run poet -f osxdocker
+```
