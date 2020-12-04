@@ -56,3 +56,4 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Exclude: 
     - "osxdocker.rb"
+    - "shot.rb"

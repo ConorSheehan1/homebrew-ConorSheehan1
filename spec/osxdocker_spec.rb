@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 # TODO: find a way to test local files rather than only files pushed to github
-# TODO: make generic test that loops over files ../*.rb, creates test per file?
 describe "osxdocker" do
   # # TODO: find a way to test current commit, not latest master.
   # # https://discourse.brew.sh/t/has-brew-install-force-formula-raw-path-been-taken-out/8793
