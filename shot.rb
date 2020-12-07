@@ -4,7 +4,7 @@ class Shot < Formula
   desc "Screenshot Helper for OSX Terminal"
   homepage "https://github.com/ConorSheehan1/shot"
   url "https://github.com/ConorSheehan1/shot/releases/download/v0.1.0/shot-0.1.0.tar.gz"
-  sha256 "9c5d39db1a4fbe04341d3d4e613b1f01caa001171cc0dc80ee9708043e46eff8"
+  sha256 "a0fb3df25226f869069390f2dc059b71dfb94b7f5e8ba02daa9a3835027aca7f"
 
   depends_on "python3"
 

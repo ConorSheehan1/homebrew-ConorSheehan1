@@ -6,4 +6,9 @@ describe "shot" do
       system(%(brew install conorsheehan1/conorsheehan1/shot))
     ).to be(true)
   end
+  it "should brew test successfully" do
+    expect(
+      system(%(brew test conorsheehan1/conorsheehan1/shot))
+    ).to be(true)
+  end
 end
