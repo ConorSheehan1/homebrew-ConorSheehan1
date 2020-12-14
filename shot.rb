@@ -1,6 +1,8 @@
 class Shot < Formula
   include Language::Python::Virtualenv
 
+  @@name = "shot"
+
   desc "Screenshot Helper for OSX Terminal"
   homepage "https://github.com/ConorSheehan1/shot"
   url "https://github.com/ConorSheehan1/shot/releases/download/v0.1.0/shot-0.1.0.tar.gz"
@@ -26,11 +28,21 @@ class Shot < Formula
   def install
     virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
+    bin.install "shot.py"
+    create_wrapper
+    bin.install @@name
+  end
+
+  private def create_wrapper
+    wrapper = '''#!/usr/bin/env bash
+SCRIPT=$(greadlink -f $0)
+SCRIPTPATH=$(dirname ${SCRIPT})
+$SCRIPTPATH/../libexec/bin/python $SCRIPTPATH/shot.py "$@"
+'''
+    File.write(@@name, wrapper)
   end
 
   test do
-    test do
-      system "#{bin}/shot", "--version"
-    end
+    system "#{bin}/shot", "--version"
   end
 end

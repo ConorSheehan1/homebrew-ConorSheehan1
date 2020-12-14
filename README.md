@@ -9,19 +9,3 @@ A [homebrew](https://docs.brew.sh/) [tap](https://docs.brew.sh/How-to-Create-and
 brew install conorsheehan1/conorsheehan1/osxdocker
 brew install conorsheehan1/conorsheehan1/shot
 ```
-
-# Dev
-### python
-Formula scaffold using [poet](https://github.com/tdsmith/homebrew-pypi-poet)
-```bash
-poetry install
-poetry run poet -f osxdocker
-```
-
-### ruby
-Tests and linting
-```bash
-bundle install
-bundle exec rubocop # --safe-auto-correct
-bundle exec rspec
-```
