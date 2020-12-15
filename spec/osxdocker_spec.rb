@@ -17,9 +17,9 @@ describe "osxdocker" do
       system(%(brew install conorsheehan1/conorsheehan1/osxdocker))
     ).to be(true)
   end
-  # it "should brew test successfully" do
-  #   expect(
-  #     system(%(brew test conorsheehan1/conorsheehan1/osxdocker))
-  #   ).to be(true)
-  # end
+  it "should brew test successfully" do
+    expect(
+      system(%(brew test conorsheehan1/conorsheehan1/osxdocker))
+    ).to be(true)
+  end
 end

@@ -1,5 +1,10 @@
 
 # Dev
+### Tagging convention
+major version tbd
+minor version when adding new tool
+patch version when fixing tool / installation
+
 ### python
 Formula scaffold using [poet](https://github.com/tdsmith/homebrew-pypi-poet)
 ```bash
@@ -14,7 +19,7 @@ poetry run poet -f osxdocker
     # e.g. brew edit shot
     ```
 
-2. install and run byebug at the point causing issues
+2. [install and run byebug](https://discourse.brew.sh/t/debugging-homebrew-using-pry-byebug/3234/4) at the point causing issues
     ```ruby
     def install
         Homebrew.install_gem_setup_path! "byebug"

@@ -40,9 +40,9 @@ class Shot < Formula
   private
 
     def create_wrapper
-      wrapper = "#!/usr/bin/env bash" \
-      "SCRIPT=$(greadlink -f $0)" \
-      "SCRIPTPATH=$(dirname ${SCRIPT})" \
+      wrapper = "#!/usr/bin/env bash\n" \
+      "SCRIPT=$(greadlink -f $0)\n" \
+      "SCRIPTPATH=$(dirname ${SCRIPT})\n" \
       '$SCRIPTPATH/../libexec/bin/python $SCRIPTPATH/shot.py "$@"'
       File.write(@name, wrapper)
     end
