@@ -5,8 +5,8 @@ class Shot < Formula
 
   desc "Screenshot Helper for OSX Terminal"
   homepage "https://github.com/ConorSheehan1/shot"
-  url "https://github.com/ConorSheehan1/shot/releases/download/v0.1.0/shot-0.1.0.tar.gz"
-  sha256 "a0fb3df25226f869069390f2dc059b71dfb94b7f5e8ba02daa9a3835027aca7f"
+  url "https://github.com/ConorSheehan1/shot/releases/download/v0.1.2/shot-0.1.2.tar.gz"
+  sha256 "c427797e97926d47854ee07acec927dddcfb8add1ecdb12da5c3962e1b9645e3"
 
   depends_on "python3"
 
@@ -28,24 +28,9 @@ class Shot < Formula
   def install
     virtualenv_create(libexec, "python3")
     virtualenv_install_with_resources
-    bin.install("shot.py")
-    create_wrapper
-    bin.install(@name)
   end
 
   test do
-    system "#{bin}/shot", "--version"
+    system "#{bin}/shot", "version"
   end
-
-  private
-
-    def create_wrapper
-      # rubocop:disable Lint/ImplicitStringConcatenation, Style/StringLiterals
-      wrapper = '''#!/usr/bin/env bash
-SCRIPT=$(greadlink -f $0)
-SCRIPTPATH=$(dirname ${SCRIPT})
-$SCRIPTPATH/../libexec/bin/python $SCRIPTPATH/shot.py "$@"'''
-      File.write(@name, wrapper)
-      # rubocop:enable Lint/ImplicitStringConcatenation, Style/StringLiterals
-    end
 end
