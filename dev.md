@@ -5,11 +5,22 @@ major version tbd
 minor version when adding new tool
 patch version when fixing tool / installation
 
-### python
+### python install
 Formula scaffold using [poet](https://github.com/tdsmith/homebrew-pypi-poet)
 ```bash
 poetry install
-poetry run poet -f osxdocker
+poetry run poet -f $package
+# e.g. poetry run poet -f osxdocker
+```
+
+### ruby install
+Tests and linting
+```bash
+bundle install
+bundle exec rubocop # --safe-auto-correct
+bundle exec rspec
+# note: can't use parallel_tests.
+# Error: Another active Homebrew update process is already in progress.
 ```
 
 ### debugging formula locally
@@ -38,10 +49,3 @@ poetry run poet -f osxdocker
 
 Additional info at https://docs.brew.sh/Python-for-Formula-Authors
 
-### ruby
-Tests and linting
-```bash
-bundle install
-bundle exec rubocop # --safe-auto-correct
-bundle exec rspec
-```
