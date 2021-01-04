@@ -11,6 +11,7 @@ Formula scaffold using [poet](https://github.com/tdsmith/homebrew-pypi-poet)
 poetry install
 poetry run poet -f $package
 # e.g. poetry run poet -f osxdocker
+# note $package doesn't need to be on pypi, just installed in current python environment.
 ```
 
 ### ruby install
