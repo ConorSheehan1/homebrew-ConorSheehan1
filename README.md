@@ -4,8 +4,7 @@
 
 A [homebrew](https://docs.brew.sh/) [tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap) for things I've made.
 
-# Example
-```bash
-brew install conorsheehan1/conorsheehan1/osxdocker
-brew install conorsheehan1/conorsheehan1/shot
-```
+|install|repo|os|
+|:-|:-|:-|
+|`brew install conorsheehan1/conorsheehan1/shot`|https://github.com/ConorSheehan1/shot|osx|
+|`brew install conorsheehan1/conorsheehan1/osxdocker`|https://github.com/ConorSheehan1/osxdocker|osx|

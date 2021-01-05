@@ -5,6 +5,11 @@ major version tbd
 minor version when adding new tool
 patch version when fixing tool / installation
 
+### generate readme table
+```bash
+bundle exec ruby scripts/generate_readme_table.rb
+```
+
 ### python install
 Formula scaffold using [poet](https://github.com/tdsmith/homebrew-pypi-poet)
 ```bash

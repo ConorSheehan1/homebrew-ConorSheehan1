@@ -27,6 +27,7 @@ Style/MethodCallWithArgsParentheses:
     - require
     - require_relative
     - raise
+    - ruby
     - source
     - to
     - to_not
