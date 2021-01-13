@@ -5,6 +5,7 @@ class Osxdocker < Formula
   homepage "https://github.com/ConorSheehan1/osxdocker"
   url "https://files.pythonhosted.org/packages/97/40/4793a93bf53da7d396b5dc096fe7aa360759907a7e44cbad5d76af73c4d8/osxdocker-0.1.3.tar.gz"
   sha256 "22494190cb8053c806ae19b02c6ec998a59b2a959076f4bd84bc7d0b2fad81c3"
+  version "0.1.3"
 
   depends_on "python3"
   depends_on "docker" => :recommended

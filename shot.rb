@@ -7,6 +7,7 @@ class Shot < Formula
   homepage "https://github.com/ConorSheehan1/shot"
   url "https://github.com/ConorSheehan1/shot/releases/download/v1.0.0/shot-1.0.0.tar.gz"
   sha256 "041c52cddf3974dfb7db149c8555cc7871b44cc921a02af1cf692ca6e962aaaa"
+  version "1.0.0"
 
   depends_on "python3"
 
