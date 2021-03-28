@@ -6,5 +6,5 @@ A [homebrew](https://docs.brew.sh/) [tap](https://docs.brew.sh/How-to-Create-and
 
 |install|repo|description|version|
 |:-|:-|:-|:-|
-|`brew install conorsheehan1/conorsheehan1/shot`|https://github.com/ConorSheehan1/shot|Screenshot Helper for OSX Terminal|1.0.0|
+|`brew install conorsheehan1/conorsheehan1/shot`|https://github.com/ConorSheehan1/shot|Screenshot Helper for OSX Terminal|2.0.1|
 |`brew install conorsheehan1/conorsheehan1/osxdocker`|https://github.com/ConorSheehan1/osxdocker|A CLI for working with docker on OSX|0.1.3|
