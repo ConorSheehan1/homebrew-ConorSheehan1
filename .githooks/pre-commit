@@ -1,0 +1,15 @@
+#!/bin/bash
+
+table_start_line=$(grep -m 1 -n 'install' README.md | cut -d : -f 1)
+current_table=$(tail --lines=+"$table_start_line" README.md)
+new_table=$(bundle exec ruby scripts/generate_readme_table.rb)
+difference=$(diff  <(echo "$current_table" ) <(echo "$new_table"))
+
+if [ -z "$difference" ]; then
+    exit 0
+else
+    echo "Difference found between current readme table and new generated table"
+    echo "$difference"
+    echo "please run 'bundle exec ruby scripts/generate_readme_table.rb' and update the readme"
+    exit 1
+fi

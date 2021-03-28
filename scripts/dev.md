@@ -1,7 +1,9 @@
 # Dev
-### committing
-ensure the readme is up to date.
-use `bundle exec ruby scripts/generate_readme_table.rb` to generate the readme table.
+### Git hooks
+```bash
+poetry run task install_hooks
+# ensures readme.md table is up to date
+```
 
 ### Tagging convention
 major version tbd
