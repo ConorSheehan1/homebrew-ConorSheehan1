@@ -4,6 +4,8 @@
 
 A [homebrew](https://docs.brew.sh/) [tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap) for things I've made.
 
+For development notes see [./scripts/dev.md](./scripts/dev.md)
+
 |install|repo|description|version|
 |:-|:-|:-|:-|
 |`brew install conorsheehan1/conorsheehan1/shot`|https://github.com/ConorSheehan1/shot|Screenshot Helper for OSX Terminal|2.0.1|
