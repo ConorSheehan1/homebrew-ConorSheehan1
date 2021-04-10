@@ -9,7 +9,8 @@ class ReadmeYaml
 
   def initialize
     @labels = %w[install repo description version]
-    @file_names, @table_data = generate_table_data
+    @file_names = generate_file_names
+    @table_data = generate_table_data
     @yaml_data = generate_yaml_data
   end
 
@@ -22,19 +23,23 @@ class ReadmeYaml
     end
   end
 
+  def generate_file_names
+    Dir["*.rb"].map do |filepath|
+      File.basename(filepath, ".rb")
+    end
+  end
+
   def generate_table_data
-    file_names = []
     table_data = Dir["*.rb"].map do |filepath|
       filename = File.basename(filepath, ".rb")
-      file_names << filename
+      # TODO: differentiate between linux brew installable files, mark in table
       [
         "`brew install conorsheehan1/conorsheehan1/#{filename}`",
         "https://github.com/ConorSheehan1/#{filename}",
         *parse_homebrew_file(filepath)
-        # TODO: differentiate between linux brew installable files, mark in table
       ]
     end
-    [file_names, table_data]
+    table_data
   end
 
   def generate_yaml_data
@@ -61,14 +66,7 @@ class Cli < Thor
 
   desc("update_readme file_path (default=README.md)", "update readme table")
   def update_readme_file(file_path = "README.md")
-    readme_data = []
-    File.open(file_path, "r") do |file|
-      file.each_line do |line|
-        break if line.include?("|install|repo|description|version|")
-
-        readme_data << line
-      end
-    end
+    readme_data = readme_without_table(file_path)
     File.open(file_path, "w") do |file|
       file.puts(readme_data)
       file.puts(ReadmeYaml.new.generate_readme_table)
@@ -89,6 +87,20 @@ class Cli < Thor
   def generate_table
     puts(ReadmeYaml.new.generate_readme_table)
   end
+
+  private
+
+    def readme_without_table(file_path)
+      readme_data = []
+      File.open(file_path, "r") do |file|
+        file.each_line do |line|
+          break if line.include?("|install|repo|description|version|")
+
+          readme_data << line
+        end
+      end
+      readme_data
+    end
 end
 
 Cli.start(ARGV)
