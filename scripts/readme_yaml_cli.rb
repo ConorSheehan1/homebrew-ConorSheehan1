@@ -79,6 +79,12 @@ class Cli < Thor
     puts(set_color(e, :white))
   end
 
+  desc("update_all", "update all files (readme and versions.yaml")
+  def update_all(readme_path = "README.md", versions_path = "versions.yaml")
+    write_yaml_file(versions_path)
+    update_readme_file(readme_path)
+  end
+
   desc("generate_table", "generate markdown table used in readme")
   def generate_table
     puts(ReadmeYaml.new.generate_readme_table)

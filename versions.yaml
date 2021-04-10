@@ -1,0 +1,11 @@
+---
+shot:
+  install: "`brew install conorsheehan1/conorsheehan1/shot`"
+  repo: https://github.com/ConorSheehan1/shot
+  description: Screenshot Helper for OSX Terminal
+  version: 2.0.1
+osxdocker:
+  install: "`brew install conorsheehan1/conorsheehan1/osxdocker`"
+  repo: https://github.com/ConorSheehan1/osxdocker
+  description: A CLI for working with docker on OSX
+  version: 0.1.3
