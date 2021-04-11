@@ -47,6 +47,9 @@ bundle exec rubocop # --safe-auto-correct
 bundle exec rspec
 # note: can't use parallel_tests.
 # Error: Another active Homebrew update process is already in progress.
+
+# generate versions.yaml and update readme table
+bundle exec ruby scripts/readme_yaml_cli.rb update_all
 ```
 
 ### debugging formula locally

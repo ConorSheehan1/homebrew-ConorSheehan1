@@ -33,6 +33,7 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
     ruby-progressbar (1.10.1)
+    thor (1.1.0)
     unicode-display_width (1.7.0)
 
 PLATFORMS
@@ -43,6 +44,7 @@ DEPENDENCIES
   markdown-tables (~> 1.1)
   rspec (~> 3.10)
   rubocop (~> 0.81.0)
+  thor (~> 1.1)
 
 RUBY VERSION
    ruby 2.7.1p83
