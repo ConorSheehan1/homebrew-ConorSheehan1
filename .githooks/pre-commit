@@ -3,13 +3,19 @@
 table_start_line=$(grep -m 1 -n 'install' README.md | cut -d : -f 1)
 current_table=$(tail --lines=+"$table_start_line" README.md)
 new_table=$(bundle exec ruby scripts/readme_yaml_cli.rb generate_table)
-difference=$(diff  <(echo "$current_table" ) <(echo "$new_table"))
 
-if [ -z "$difference" ]; then
+current_yaml=$(cat versions.yaml)
+new_yaml=$(bundle exec ruby scripts/readme_yaml_cli.rb generate_yaml)
+
+table_difference=$(diff  <(echo "$current_table" ) <(echo "$new_table"))
+yaml_difference=$(diff <(echo "$current_yaml") <(echo "$new_yaml"))
+
+if [ -z "$table_difference" ] && [ -z "$yaml_difference" ]; then
     exit 0
 else
-    echo "Difference found between current readme table and new generated table"
-    echo "$difference"
+    echo "Difference found between committed files"
+    echo "table_difference: $table_difference"
+    echo "yaml_difference: $yaml_difference"
     echo "please run 'bundle exec ruby scripts/readme_yaml_cli.rb update_all'"
     exit 1
 fi

@@ -88,6 +88,11 @@ class Cli < Thor
     puts(ReadmeYaml.new.generate_readme_table)
   end
 
+  desc("generate_yaml", "generate yaml used in versions.yaml")
+  def generate_yaml
+    puts(ReadmeYaml.new.generate_yaml_data)
+  end
+
   private
 
     def readme_without_table(file_path)
