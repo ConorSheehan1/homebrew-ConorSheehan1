@@ -7,7 +7,7 @@ Layout/IndentationConsistency:
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
-  
+
 Style/ColonMethodCall:
   Enabled: false
 
@@ -35,8 +35,8 @@ Style/MethodCallWithArgsParentheses:
 # don't like .zero? instead of == 0
 Style/NumericPredicate:
   Enabled: false
-  
-# preferred method aliases  
+
+# preferred method aliases
 Style/CollectionMethods:
   Enabled: true
   PreferredMethods:
@@ -55,6 +55,5 @@ Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
-  Exclude: 
-    - "osxdocker.rb"
-    - "shot.rb"
+  Exclude:
+    - "Formula/*.rb"
