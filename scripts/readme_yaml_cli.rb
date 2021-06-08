@@ -8,6 +8,7 @@ class ReadmeYaml
   attr_reader :file_names, :table_data, :yaml_data
 
   def initialize
+    @formula_glob = "Formula/*.rb"
     @labels = %w[install repo description version]
     @file_names = generate_file_names
     @table_data = generate_table_data
@@ -24,13 +25,13 @@ class ReadmeYaml
   end
 
   def generate_file_names
-    Dir["*.rb"].map do |filepath|
+    Dir[@formula_glob].map do |filepath|
       File.basename(filepath, ".rb")
     end
   end
 
   def generate_table_data
-    table_data = Dir["*.rb"].map do |filepath|
+    table_data = Dir[@formula_glob].map do |filepath|
       filename = File.basename(filepath, ".rb")
       # TODO: differentiate between linux brew installable files, mark in table
       [
