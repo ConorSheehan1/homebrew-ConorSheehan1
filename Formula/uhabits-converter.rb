@@ -77,6 +77,6 @@ class UhabitsConverter < Formula
   end
 
   test do
-    system "#{bin}/uhabits-converter", "--version"
+    system "#{bin}/uhabits-converter", "version"
   end
 end
