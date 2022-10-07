@@ -10,3 +10,4 @@ For development notes see [./scripts/dev.md](./scripts/dev.md)
 |:-|:-|:-|:-|
 |`brew install conorsheehan1/conorsheehan1/shot`|https://github.com/ConorSheehan1/shot|Screenshot Helper for OSX Terminal|2.0.1|
 |`brew install conorsheehan1/conorsheehan1/osxdocker`|https://github.com/ConorSheehan1/osxdocker|A CLI for working with docker on OSX|0.1.3|
+|`brew install conorsheehan1/conorsheehan1/uhabits-converter`|https://github.com/ConorSheehan1/uhabits-converter|Convert uhabits boolean habits to the new numeric habit type|0.2.2|

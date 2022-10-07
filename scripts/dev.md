@@ -13,8 +13,11 @@ patch version when fixing tool / installation
 ### python install
 Formula scaffold using [poet](https://github.com/tdsmith/homebrew-pypi-poet)
 ```bash
+cd scripts
 poetry install
 poetry run poet -f $package
+# copy output to new file Formula/$package.rb e.g.
+# follow other files as example for required manual updates (description, version, test, etc.)
 ```
 
 ```bash
@@ -45,6 +48,7 @@ Tests and linting
 bundle install
 bundle exec rubocop # --safe-auto-correct
 bundle exec rspec
+# note: tests are setup to ensure hosted tap works. 
 # note: can't use parallel_tests.
 # Error: Another active Homebrew update process is already in progress.
 

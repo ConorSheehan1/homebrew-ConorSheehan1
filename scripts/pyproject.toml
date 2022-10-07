@@ -6,11 +6,12 @@ authors = ["Conor Sheehan <conor.sheehan.dev@gmail.com>"]
 license = "mit"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
 homebrew-pypi-poet = "^0.10.0"
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.7.0"
+uhabits-converter = "^0.2.2"
 
 [tool.taskipy.tasks]
 # https://github.com/python-poetry/poetry/issues/241
